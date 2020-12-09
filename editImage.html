@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <script type="text/javascript" src="action.js"></script>
+        <link rel="stylesheet" type="text/css" href="home.css">
+        
+    </head>
+    <body>
+        <h5>Edit Image </h5>
+
+        <form method="POST">
+        
+            <table>
+              <tr>
+                <td>
+                  <label for="url">URL</label>
+                </td>
+                <td>
+                  <input type="text" id="url" name="URL" placeholder="Your URL.." required />
+                </td>
+              </tr>
+    
+              <tr>
+                <td>
+        
+                  <label for="name">Name</label>
+                </td>
+                <td>
+                  <input type="text" id="name" name="name" placeholder="Your name..">
+        
+                </td>
+              </tr>
+    
+              <tr>
+                <td>
+                  <label for="info">Info</label>
+                </td>
+                <td>
+                  <input type="text" id="info" name="info" placeholder="Info" required />
+                </td>
+              </tr>
+      
+              <tr>
+                <td>
+                  <label for="date">Upload Date</label>
+                </td>
+                <td>
+                  <input type="date" id="date" name="date" placeholder="Upload Date" required />
+                </td>
+              </tr>
+              
+              <tr>
+                <td></td>
+                <td>
+                  <input type="submit" value="Edit" class="submit" onclick="edit()"/>
+                  <input type="reset" value="Reset" class="reset" />
+                </td>
+              </tr>
+            </table>
+    
+          
+          </form>
+        <a href="galleryAdmin.html">Gallery Admin</a>
+
+    </body>
+</html>

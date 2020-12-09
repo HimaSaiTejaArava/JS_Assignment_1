@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="action.js"></script>
+    <link rel="stylesheet" type="text/css" href="home.css">
+  </head>
+  <body onload="openTab(event, 'home'); boom();">
+
+    <h2>Welcome to HTML & CSS Demo</h2>
+
+    <div class="tab" >
+      <button class="tablinks" onclick="openTab(event, 'home')" >Home</button>
+      <button class="tablinks" onclick="openTab(event, 'aboutMe')">About Me</button>
+      <button class="tablinks" onclick="openTab(event, 'contactMe')">Contact Me</button>
+      <button class="tablinks" onclick="openTab(event, 'gallery')">Gallery</button>
+    </div>
+
+    <div id="home" class="tabcontent">
+      <p>Welcome to HTML and CSS; Eat - Work - Sleep - Repeat</p>
+    </div>
+
+    <div id="aboutMe" class="tabcontent">
+      <p>My name is Hima Sai Teja Arava. And the nickname is Happy, Integrity and Patience are my best attributes. <br> 
+        Happy believes in the saying " Career Is What You Are Paid For, But Purpose Is What You Are Made For. " <br>
+        () => 'Loves to cook code and learn new things'; <br>
+        A Vocalist - RockMusicFreak, HeavyMetal; Playing with Kids, Cooking. <br>
+        Be-Happy and Make-Happy...!!!</p> 
+    </div>
+
+    <div id="contactMe" class="tabcontent">
+      <p>
+        <p>Contact Me</p>
+        Email-Id: himasaiteja.arava@zemosolabs.com (or) behappy.hima@gmail.com <br>
+        <a href="">LinkedIn</a> <br>
+        <a href="">Git Account</a>
+      </p>
+
+      <p style="color: cyan">or Fill the Form</p>
+
+      <form action="saved.html" method="POST">
+        
+        <table>
+          <tr>
+            <td>
+              <label for="fname">First Name</label>
+            </td>
+            <td>
+              <input type="text" id="fname" name="firstname" placeholder="Your name.." required />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+    
+              <label for="lname">Last Name</label>
+            </td>
+            <td>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label for="contactNumber">Contact Number</label>
+            </td>
+            <td>
+              <input type="number" id="contactNumber" name="contactNumber" placeholder="Will ping you there" required />
+            </td>
+          </tr>
+  
+          <tr>
+            <td>
+              <label for="email">Email</label>
+            </td>
+            <td>
+              <input type="email" id="email" name="emailAddress" placeholder="Your email details" required />
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              <label for="subject">Subject</label>
+            </td>
+            <td>
+              <input type="text" id="subject" name="subject" placeholder="Write something... " />
+            </td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>
+              <input type="submit" value="Submit" class="submit" />
+              <input type="reset" value="Reset" class="reset" />
+            </td>
+          </tr>
+        </table>
+
+      
+      </form>
+
+    </div>
+
+    <div id="gallery" class="tabcontent" onload="boom()">
+      <a href="galleryAdmin.html">Gallery Admin</a>
+      <div class="grid-container" id="imagesContainer">
+        <script>
+          function boom(){
+            let Objs = JSON.parse(sessionStorage.getItem("images"));
+
+            for(i = 0; i < Objs.length; i++){
+              var img = document.createElement("img");
+              img.src =  Objs[i].url;
+              img.className="grid-item";
+              document.getElementById('imagesContainer').appendChild(img); 
+            }
+          }
+        </script>
+      </div>
+    </div>
+
+  </body>
+</html> 

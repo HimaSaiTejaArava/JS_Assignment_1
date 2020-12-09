@@ -1,0 +1,93 @@
+body {
+    font-family: Arial;
+    background-color: #232323;
+}
+
+h2 {
+    text-align: center;
+    color: #1bb953;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  color: #fff;
+  line-height: 30px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+a {
+    color: #1bb953;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
+  width: 40rem;
+  grid-row-gap: 17px;
+  grid-column-gap: 17px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 3px;
+  font-size: 30px;
+  text-align: center;
+  width: 12rem;
+  height: 15rem;
+}
+
+input, select, textarea, .submit, .reset{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+label {
+  color: #fff;
+}
+
+.submit, .reset {
+  width: 5rem;
+}
+
+table {
+  width: 50%;
+}
+
